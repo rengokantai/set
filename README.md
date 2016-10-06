@@ -68,4 +68,15 @@ hello
 wget https://repo.percona.com/apt/percona-release_0.1-4.$(lsb_release -sc)_all.deb
 dpkg -i percona-release_0.1-4.$(lsb_release -sc)_all.deb 
 sudo apt-get update && sudo apt-get install percona-server-server-5.7
+sudo apt-get install percona-xtradb-cluster-57
+//sudo apt-get install percona-xtradb-full-57
+```
+
+##postgis
+```
+wget http://download.osgeo.org/postgis/source/postgis-2.3.0.tar.gz
+tar xvzf postgis-2.3.0.tar.gz 
+cd postgis-2.3.0 
+./configure 
+make && make install
 ```
