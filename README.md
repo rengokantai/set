@@ -1,4 +1,12 @@
 # set
+
+##apache kafka
+```
+wget http://mirror.cc.columbia.edu/pub/software/apache/kafka/0.10.0.1/kafka_2.11-0.10.0.1.tgz
+apt update && apt install openjdk-8-jdk && apt install scala
+tar xvf kafka_2.11-0.10.0.1.tgz
+cp -r kafka_2.11-0.10.0.1/ /usr/local/bin/kafka/
+```
 ##docker-compose
 ```
 curl -L https://github.com/docker/compose/releases/download/1.7.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose
