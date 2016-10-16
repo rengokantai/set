@@ -1,6 +1,7 @@
 # set
 
 ##apache kafka
+Must use 2GB+  
 ```
 wget http://mirror.cc.columbia.edu/pub/software/apache/kafka/0.10.0.1/kafka_2.11-0.10.0.1.tgz
 apt update && apt install -y openjdk-8-jdk && apt install scala -y
