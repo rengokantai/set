@@ -42,6 +42,21 @@ add-apt-repository ppa:webupd8team/java -y
 apt-get update
 apt-get install oracle-java8-installer -y
 ```
+
+## Jenkins2
+### CentOS
+repo: https://pkg.jenkins.io/redhat/
+```
+yum -y install java
+wget https://pkg.jenkins.io/redhat/jenkins-2.54-1.1.noarch.rpm
+rpm -Uvh j
+systemctl enable jenkins && system start jenkins
+vi /var/lib/jenkins/secrets/initialAdminPassword
+```
+copy and paste localhost:8080
+
+
+
 ## golang 1.7 
 ### u16
 ```
