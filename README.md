@@ -44,6 +44,10 @@ apt-get install oracle-java8-installer -y
 ```
 
 ## Jenkins2
+### MAC
+```
+java -jar jenkins.war  
+```
 ### CentOS
 repo: https://pkg.jenkins.io/redhat/
 ```
