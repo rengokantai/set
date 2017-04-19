@@ -108,3 +108,9 @@ cd postgis-2.3.0
 ./configure 
 make && make install
 ```
+
+## teamcity
+```
+wget https://download.jetbrains.com/teamcity/TeamCity-2017.1.tar.gz
+Teamcity/bin/runAll.sh start
+```
