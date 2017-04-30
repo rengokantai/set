@@ -43,23 +43,6 @@ apt-get update
 apt-get install oracle-java8-installer -y
 ```
 
-## Jenkins2
-### MAC
-```
-java -jar jenkins.war  
-```
-### CentOS
-repo: https://pkg.jenkins.io/redhat/
-```
-yum -y install java
-wget https://pkg.jenkins.io/redhat/jenkins-2.54-1.1.noarch.rpm
-rpm -Uvh j
-systemctl enable jenkins && system start jenkins
-vi /var/lib/jenkins/secrets/initialAdminPassword
-```
-copy and paste localhost:8080
-
-
 
 ## golang 1.7 
 ### u16
@@ -91,6 +74,40 @@ then run
 ```
 hello
 ```
+
+## Jenkins2
+### MAC
+```
+java -jar jenkins.war  
+```
+### CentOS
+repo: https://pkg.jenkins.io/redhat/
+```
+yum -y install java
+wget https://pkg.jenkins.io/redhat/jenkins-2.54-1.1.noarch.rpm
+rpm -Uvh j
+systemctl enable jenkins && system start jenkins
+vi /var/lib/jenkins/secrets/initialAdminPassword
+```
+copy and paste localhost:8080
+
+
+## mysql
+### CentOS
+```
+wget https://dev.mysql.com/get/mysql57-community-release-el7-9.noarch.rpm
+rpm -ivh mysql57-community-release-el7-9.noarch.rpm
+yum install mysql-server
+systemctl start mysqld
+grep 'temporary password' /var/log/mysqld.log
+mysql_secure_installation
+```
+
+
+
+
+
+
 ## percona
 ```
 wget https://repo.percona.com/apt/percona-release_0.1-4.$(lsb_release -sc)_all.deb
