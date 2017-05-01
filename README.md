@@ -1,5 +1,12 @@
 # set
 
+## ab
+### CentOS
+```
+yum provides /usr/bin/ab
+yum install -y httpd-tools
+```
+
 ## apache kafka
 Must use 2GB+  
 ```
