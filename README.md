@@ -15,6 +15,23 @@ apt update && apt install -y openjdk-8-jdk && apt install scala -y
 tar xvf kafka_2.11-0.10.0.1.tgz
 cp -r kafka_2.11-0.10.0.1/ /usr/local/bin/kafka/
 ```
+## docker
+[see here](https://github.com/moby/moby/releases)
+### CentOS
+```
+curl -fsSL https://test.docker.com/ | sh
+systectl start docker
+```
+enable experimental feature:
+```
+vi /etc/docker/daemon.json
+```
+edit
+```
+{
+  "experimental":true
+}
+```
 ## docker-compose
 ```
 curl -L https://github.com/docker/compose/releases/download/1.7.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose
