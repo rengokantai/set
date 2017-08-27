@@ -167,6 +167,19 @@ cd postgis-2.3.0
 make && make install
 ```
 
+## postgres
+u16 9.6
+```
+vim /etc/apt/sources.list.d/pgdg.list
+```
+add
+```
+deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main
+```
+then
+```
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add - && apt-get update && apt install postgresql-9.6
+```
 ## teamcity
 ```
 wget https://download.jetbrains.com/teamcity/TeamCity-2017.1.tar.gz
