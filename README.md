@@ -128,6 +128,34 @@ vi /var/lib/jenkins/secrets/initialAdminPassword
 copy and paste localhost:8080
 
 
+## mongodb 3.2 community
+u16
+```
+apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
+```
+```
+echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list && apt update && apt-get install -y mongodb-org
+```
+(only for u16)
+```
+vim /lib/systemd/system/mongod.service
+```
+edit
+```
+[Unit]
+Description=High-performance, schema-free document-oriented database
+After=network.target
+Documentation=https://docs.mongodb.org/manual
+
+[Service]
+User=mongodb
+Group=mongodb
+ExecStart=/usr/bin/mongod --quiet --config /etc/mongod.conf
+
+[Install]
+WantedBy=multi-user.target
+```
+
 ## mysql
 ### CentOS
 ```
