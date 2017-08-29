@@ -157,7 +157,8 @@ WantedBy=multi-user.target
 ```
 start
 ```
-service mongod start
+service mongod start 
+mkdir -p /data/db
 ```
 remove
 ```
