@@ -136,7 +136,7 @@ apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
 ```
 echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list && apt update && apt-get install -y mongodb-org
 ```
-(only for u16)
+(only for u16) / (personally test) seems like it already created.
 ```
 vim /lib/systemd/system/mongod.service
 ```
@@ -154,6 +154,15 @@ ExecStart=/usr/bin/mongod --quiet --config /etc/mongod.conf
 
 [Install]
 WantedBy=multi-user.target
+```
+start
+```
+service mongod start
+```
+remove
+```
+apt purge mongodb-org*
+rm -r /var/log/mongodb && rm -r /var/lib/mongodb
 ```
 
 ## mysql
